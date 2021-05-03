@@ -1,6 +1,9 @@
 <?php
 $text = "Ciao oggi sono andato al mare e mi sono bruciato la schiena, sono proprio un ";
 $bad_word = $_GET['parolaccia'];
+if ( $bad_word == 'coglione') {
+  $bad_word = '***';
+}
 $text .= $bad_word;
 ?>
 
