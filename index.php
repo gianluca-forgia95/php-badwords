@@ -2,6 +2,7 @@
 $text = "oggi ho iniziato php, oggi ho fatto la pasta al pesto, poi sempre oggi ho preso un caffè, poi ho steso i panni, sempre oggi devo fare la spesa ";
 $bad_word = $_GET['word_censored'];
 $lenght = strlen($text);
+$text_cens = str_replace($bad_word, '***', $text);
 ?>
 
 
@@ -15,7 +16,7 @@ $lenght = strlen($text);
 </head>
 <body>
     
-    <p><?php echo str_replace($bad_word, '***', $text); ?></p>
+    <p><?php echo $text_cens; ?></p>
 
     <h3>Text Lenght:  <?php echo $lenght ?> caratteri </h3>
     
