@@ -1,10 +1,10 @@
 <?php
-$text = "Ciao oggi sono andato al mare e mi sono bruciato la schiena, sono proprio un ";
-$bad_word = $_GET['parolaccia'];
-if ( $bad_word == 'coglione') {
-  $bad_word = '***';
-}
-$text .= $bad_word;
+$text = "oggi ho iniziato php, oggi ho fatto la pasta al pesto, poi sempre oggi ho preso un caffè, poi ho steso i panni, sempre oggi devo fare la spesa ";
+$bad_word = $_GET['word_censored'];
+// if ( $bad_word == 'coglione') {
+//   $bad_word = '***';
+// }
+// $text .= $bad_word;
 ?>
 
 
@@ -17,6 +17,8 @@ $text .= $bad_word;
     <title>PHP Badwords</title>
 </head>
 <body>
-    <p> <?php echo $text; ?> </p>
+    
+    <p><?php echo str_replace($bad_word, '***', $text); ?></p>
+
 </body>
 </html>
